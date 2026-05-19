@@ -91,8 +91,7 @@ strong { font-weight: 800; }
   align-items: center;
   justify-content: space-between;
   padding: 0 1.25rem;
-  background: #1d1d1b !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #1d1d1b;
 }
 
 .nav-logo { height: 38px; object-fit: contain; }

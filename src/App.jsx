@@ -1,22 +1,17 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Mousewheel, Keyboard, Pagination } from 'swiper/modules'
-
-// Styles
 import 'swiper/css'
 import 'swiper/css/pagination'
+import './App.css'
 
-// Components
-import Preloader from './components/Preloader'
-import Nav from './components/Nav'
-
-// Slides
 import ReportHeroSlide from './slides/ReportHeroSlide'
 import AdquisicionUsuariosSlide from './slides/AdquisicionUsuariosSlide'
 import FuenteMedioSesionSlide from './slides/FuenteMedioSesionSlide'
 import AiTrafficSlide from './slides/AiTrafficSlide'
 import ConversionesSlide from './slides/ConversionesSlide'
 import TechBrowsersSlide from './slides/TechBrowsersSlide'
+import ExecutiveSummarySlide from './slides/ExecutiveSummarySlide'
 import LocalSeoRiojaSlide from './slides/LocalSeoRiojaSlide'
 import LocalSeoRiojaMetricsSlide from './slides/LocalSeoRiojaMetricsSlide'
 import LocalSeoHaroSlide from './slides/LocalSeoHaroSlide'
@@ -27,50 +22,59 @@ import TechImplementationSlideP1 from './slides/TechImplementationSlideP1'
 import TechImplementationSlideP2 from './slides/TechImplementationSlideP2'
 import GenerativeAIOptSlide from './slides/GenerativeAIOptSlide'
 import ActionPlanMaySlide from './slides/ActionPlanMaySlide'
-import ExecutiveSummarySlide from './slides/ExecutiveSummarySlide'
+
+import Nav from './components/Nav'
+import Preloader from './components/Preloader'
+import { prepareSlideAnimations, animateSlideIn } from './animations'
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
-  const [password, setPassword] = useState('')
-  const [authError, setAuthError] = useState(false)
-  const [introFinished, setIntroFinished] = useState(false)
   const [swiperInstance, setSwiperInstance] = useState(null)
+  const [introFinished, setIntroFinished] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
 
-  // Auth local check
-  useEffect(() => {
-    const authState = localStorage.getItem('roots_auth')
-    if (authState === 'true') {
-      setIsAuthenticated(true)
-    }
-  }, [])
+  // Auth State
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return sessionStorage.getItem('roots_auth') === 'true'
+  })
+  const [password, setPassword] = useState('')
+  const [authError, setAuthError] = useState(false)
 
   const handleLogin = (e) => {
     e.preventDefault()
     if (password === 'rootsabril') {
-      localStorage.setItem('roots_auth', 'true')
       setIsAuthenticated(true)
-      setAuthError(false)
+      sessionStorage.setItem('roots_auth', 'true')
     } else {
       setAuthError(true)
     }
   }
 
-  const handleSwiperInit = (swiper) => {
-    setSwiperInstance(swiper)
-  }
-
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.activeIndex)
+    if (swiper.slides && swiper.slides[swiper.activeIndex]) {
+      const activeSlide = swiper.slides[swiper.activeIndex]
+      animateSlideIn(activeSlide)
+    }
+  }
+
+  const handleSwiperInit = (swiper) => {
+    setSwiperInstance(swiper)
+    if (swiper.slides && swiper.slides.length) {
+      swiper.slides.forEach(slide => prepareSlideAnimations(slide))
+      setTimeout(() => {
+        if (swiper.slides && swiper.slides[swiper.activeIndex]) {
+          animateSlideIn(swiper.slides[swiper.activeIndex])
+        }
+      }, 100)
+    }
   }
 
   const handleNextSlide = () => {
-    if (swiperInstance) {
-      if (swiperInstance.activeIndex === swiperInstance.slides.length - 1) {
-        swiperInstance.slideTo(0)
-      } else {
-        swiperInstance.slideNext()
-      }
+    if (!swiperInstance) return
+    if (swiperInstance.activeIndex === swiperInstance.slides.length - 1) {
+      swiperInstance.slideTo(0)
+    } else {
+      swiperInstance.slideNext()
     }
   }
 
@@ -142,7 +146,6 @@ function App() {
   }
 
   const isLastSlide = swiperInstance && activeIndex === swiperInstance.slides.length - 1
-  const isFirstSlide = activeIndex === 0
 
   return (
     <div style={{ width: '100vw', height: '100dvh', overflow: 'hidden', background: 'var(--color-cream)', position: 'relative' }}>
@@ -192,41 +195,38 @@ function App() {
           className="swiper-no-swiping"
           style={{
             position: 'absolute',
-            bottom: 'clamp(0.65rem, 2dvh, 1.15rem)',
+            bottom: '0.85rem',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 999,
-            background: isFirstSlide ? 'rgba(255, 255, 255, 0.08)' : 'transparent',
-            color: isFirstSlide ? '#ede8df' : 'rgba(29,29,27,0.32)',
-            border: isFirstSlide ? '1px solid rgba(237,232,223,0.22)' : '1px solid rgba(29,29,27,0.13)',
+            background: 'rgba(255, 255, 255, 0.85)',
+            color: '#1d1d1b',
+            border: '1.5px solid rgba(29,29,27,0.18)',
             borderRadius: '50px',
-            padding: '0.28rem 0.8rem',
-            fontSize: 'clamp(0.46rem, 1.3vw, 0.52rem)',
-            fontWeight: '700',
+            padding: '0.3rem 0.85rem',
+            fontSize: '0.48rem',
+            fontWeight: '800',
             textTransform: 'uppercase',
             letterSpacing: '0.12em',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '0.25rem',
-            transition: 'opacity 0.3s, color 0.3s, border-color 0.3s, background 0.3s',
-            opacity: isFirstSlide ? 0.85 : 0.65,
+            gap: '0.3rem',
+            transition: 'opacity 0.25s, transform 0.2s, background 0.25s',
+            opacity: 0.9,
             whiteSpace: 'nowrap',
+            boxShadow: '0 3px 10px rgba(0,0,0,0.06)'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.opacity = '1'
-            e.currentTarget.style.color = isFirstSlide ? '#1d1d1b' : '#1d1d1b'
-            e.currentTarget.style.borderColor = isFirstSlide ? '#ede8df' : 'rgba(29,29,27,0.3)'
-            e.currentTarget.style.background = isFirstSlide ? '#ede8df' : 'rgba(255,255,255,0.5)'
+            e.currentTarget.style.background = '#ffffff'
+            e.currentTarget.style.transform = 'translateX(-50%) scale(1.04)'
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.opacity = isFirstSlide ? '0.85' : '0.65'
-            e.currentTarget.style.color = isFirstSlide ? '#ede8df' : 'rgba(29,29,27,0.32)'
-            e.currentTarget.style.borderColor = isFirstSlide ? 'rgba(237,232,223,0.22)' : 'rgba(29,29,27,0.13)'
-            e.currentTarget.style.background = isFirstSlide ? 'rgba(255, 255, 255, 0.08)' : 'transparent'
+            e.currentTarget.style.background = 'rgba(255, 255, 255, 0.85)'
+            e.currentTarget.style.transform = 'translateX(-50%) scale(1)'
           }}
         >
-          {isLastSlide ? '↺ Volver al inicio' : 'Siguiente →'}
+          {isLastSlide ? '↺ Inicio' : 'Siguiente →'}
         </button>
       )}
     </div>
