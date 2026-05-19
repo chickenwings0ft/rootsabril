@@ -7,54 +7,55 @@ export default function GenerativeAIOptSlide() {
 
         {/* Header */}
         <header className="slide-header">
-          <p className="slide-label">Innovación &amp; GEO</p>
+          <p className="slide-label">5</p>
           <h2 className="slide-title reveal">Motores de Búsqueda IA</h2>
-          <p className="slide-desc reveal">
-            Los usuarios buscan en lenguaje natural: <em>"Restaurante acogedor en Logroño con buen vino"</em>. Optimizamos para ser la respuesta que da la IA.
+          <p className="slide-desc reveal" style={{ fontSize: '0.82rem', lineHeight: '1.4' }}>
+            Los usuarios buscan hablando de forma natural: <em>"Restaurante acogedor en Logroño con buen vino"</em>. Nos preparamos para que la IA nos recomiende.
           </p>
         </header>
 
         {/* Body */}
-        <div className="slide-body">
+        <div className="slide-body reveal-stagger">
 
-          <div className="insight-stack reveal-stagger">
-
-            <div className="insight-card" style={{ display: 'flex', gap: '0.85rem', alignItems: 'flex-start' }}>
-              <div style={{
-                flexShrink: 0, width: '36px', height: '36px', borderRadius: '10px',
-                background: 'rgba(29,53,53,0.08)', display: 'flex', alignItems: 'center',
-                justifyContent: 'center', fontSize: '1.1rem'
-              }}>🤖</div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <h4 className="insight-card__title" style={{ marginBottom: '0.2rem' }}>Fichero /llms.txt</h4>
-                <p className="insight-card__body">
-                  Creamos una ficha estandarizada para que los rastreadores de IA lean la esencia y carta viva de Roots directamente de la fuente, facilitando su indexación prioritaria.
-                </p>
-              </div>
+          {/* Visual Column */}
+          <div style={{ flex: '1', display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+            <div className="chart-frame" style={{ flex: '1', minHeight: '160px', background: '#f8f9fa', borderRadius: '12px' }}>
+              <img
+                src="/llms-checker.png"
+                alt="Ficha de lectura para Inteligencia Artificial"
+                className="chart-img"
+                style={{ objectFit: 'cover', objectPosition: 'top' }}
+              />
             </div>
-
-            <div className="insight-card" style={{ display: 'flex', gap: '0.85rem', alignItems: 'flex-start' }}>
-              <div style={{
-                flexShrink: 0, width: '36px', height: '36px', borderRadius: '10px',
-                background: 'rgba(29,53,53,0.08)', display: 'flex', alignItems: 'center',
-                justifyContent: 'center', fontSize: '1.1rem'
-              }}>💬</div>
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <h4 className="insight-card__title" style={{ marginBottom: '0.2rem' }}>Contexto Semántico</h4>
-                <p className="insight-card__body">
-                  Enlazamos menciones y premios gastronómicos para aumentar la probabilidad de recomendación en ChatGPT, Claude y Perplexity.
-                </p>
-              </div>
-            </div>
-
+            <p style={{
+              fontSize: '0.58rem', fontWeight: '800', color: '#5a7a5a',
+              textAlign: 'center', letterSpacing: '0.1em', textTransform: 'uppercase'
+            }}>
+              Lectura y validador de IA (llms.txt)
+            </p>
           </div>
 
-          {/* GEO insight box */}
-          <div className="insight-analysis reveal">
-            <span className="insight-analysis__icon">🏆</span>
-            <p className="insight-analysis__text">
-              <strong>GEO (Generative Engine Optimization):</strong> Posicionamos a Roots a la vanguardia tecnológica antes de que el sector reaccione a esta nueva era de búsquedas. Un canal emergente que ya genera resultados medibles.
-            </p>
+          {/* Text Content Column */}
+          <div className="insight-stack" style={{ flex: '1.2', overflowY: 'auto', paddingRight: '4px' }}>
+
+            <div className="insight-card" style={{ display: 'flex', gap: '0.85rem', alignItems: 'flex-start', padding: '1rem 1.25rem', marginBottom: '0.65rem' }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <h4 className="insight-card__title" style={{ marginBottom: '0.3rem', fontSize: '0.82rem', fontWeight: '800' }}>Ficha Especial para IA (llms.txt)</h4>
+                <p className="insight-card__body" style={{ fontSize: '0.7rem', lineHeight: '1.4', color: 'var(--color-dark)', opacity: 0.85 }}>
+                  Creamos una ficha de lectura sencilla para que herramientas como ChatGPT lean directamente quiénes somos y nuestra carta viva, facilitando que nos recomienden de inmediato.
+                </p>
+              </div>
+            </div>
+
+            <div className="insight-card" style={{ display: 'flex', gap: '0.85rem', alignItems: 'flex-start', padding: '1rem 1.25rem' }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <h4 className="insight-card__title" style={{ marginBottom: '0.3rem', fontSize: '0.82rem', fontWeight: '800' }}>Confianza de Marca</h4>
+                <p className="insight-card__body" style={{ fontSize: '0.7rem', lineHeight: '1.4', color: 'var(--color-dark)', opacity: 0.85 }}>
+                  Conectamos las menciones y premios de Roots en internet para que las inteligencias artificiales confíen en nosotros y nos elijan como su recomendación estrella.
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </div>

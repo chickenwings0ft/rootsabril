@@ -5,20 +5,20 @@ export default function ActionPlanMaySlide() {
     {
       num: '01',
       icon: '🎯',
-      title: 'Creación de Landings Específicas',
-      body: 'Páginas individuales para "Reservas de Grupos en Logroño" y "Vinoteca en Haro" para captar tráfico directo.',
+      title: 'Creación de Landings Pages',
+      body: 'Seguir con la creación de landing pages para mejorar y conseguir más usuarios y clientes.',
     },
     {
       num: '02',
       icon: '⭐',
-      title: 'Campañas de Captura de Reseñas',
-      body: 'Incentivar sutilmente al cliente en sala para seguir aumentando la calificación media (objetivo 4.8★).',
+      title: 'Optimización de la ficha de Google',
+      body: 'Seguir respondiendo reseñas con menos de 24 horas desde que llegan y revisando y actualizando.',
     },
     {
       num: '03',
       icon: '📊',
       title: 'Seguimiento GA4 y Reservas',
-      body: 'Control exhaustivo del retorno de inversión (ROI) derivado del posicionamiento web.',
+      body: 'Control de las métricas para ir viendo la evolución diaria y tomar las decisiones para ir actualizando los contenidos y la web.',
     },
   ]
 
@@ -28,7 +28,7 @@ export default function ActionPlanMaySlide() {
 
         {/* Header */}
         <header className="slide-header">
-          <p className="slide-label">Plan de Acción</p>
+          <p className="slide-label">6</p>
           <h2 className="slide-title reveal">Próximos Pasos: Mayo</h2>
           <p className="slide-desc reveal">
             Acciones concretas para consolidar e incrementar los resultados obtenidos en abril.

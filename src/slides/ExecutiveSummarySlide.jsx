@@ -42,7 +42,7 @@ export default function ExecutiveSummarySlide() {
 
         {/* Header */}
         <header className="slide-header">
-          <p className="slide-label">Conclusiones — Resumen Ejecutivo</p>
+          <p className="slide-label">7</p>
           <h2 className="slide-title reveal" style={{ color: 'var(--color-green)' }}>Resumen del Informe</h2>
           <p className="slide-desc reveal">
             Síntesis estratégica de los cuatro pilares de rendimiento digital — Roots Logroño &amp; Haro · Abril 2026.

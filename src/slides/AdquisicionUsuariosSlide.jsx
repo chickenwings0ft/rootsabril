@@ -33,7 +33,7 @@ export default function AdquisicionUsuariosSlide() {
             <p className="slide-label">Captación de Clientes</p>
             <h2 className="slide-title reveal">Rendimiento de Captación</h2>
             <p className="slide-desc reveal">
-              Cómo llegan nuevos usuarios a la web — Abril / Mayo 2026.
+              Esta métrica nos dice exactamente cómo nos descubrió cada cliente la primera vez que pisó nuestra página web.
             </p>
           </header>
 

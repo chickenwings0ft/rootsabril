@@ -11,11 +11,10 @@ import FuenteMedioSesionSlide from './slides/FuenteMedioSesionSlide'
 import AiTrafficSlide from './slides/AiTrafficSlide'
 import ConversionesSlide from './slides/ConversionesSlide'
 import TechBrowsersSlide from './slides/TechBrowsersSlide'
-import ExecutiveSummarySlide from './slides/ExecutiveSummarySlide'
+
 import LocalSeoRiojaSlide from './slides/LocalSeoRiojaSlide'
-import LocalSeoRiojaMetricsSlide from './slides/LocalSeoRiojaMetricsSlide'
 import LocalSeoHaroSlide from './slides/LocalSeoHaroSlide'
-import LocalSeoHaroMetricsSlide from './slides/LocalSeoHaroMetricsSlide'
+import TransitionActionSlide from './slides/TransitionActionSlide'
 import OrganicKeywordsSlide from './slides/OrganicKeywordsSlide'
 import TechnicalAnalyticsSlide from './slides/TechnicalAnalyticsSlide'
 import TechImplementationSlideP1 from './slides/TechImplementationSlideP1'
@@ -176,16 +175,14 @@ function App() {
         <SwiperSlide><ConversionesSlide /></SwiperSlide>
         <SwiperSlide><TechBrowsersSlide /></SwiperSlide>
         <SwiperSlide><LocalSeoRiojaSlide /></SwiperSlide>
-        <SwiperSlide><LocalSeoRiojaMetricsSlide /></SwiperSlide>
         <SwiperSlide><LocalSeoHaroSlide /></SwiperSlide>
-        <SwiperSlide><LocalSeoHaroMetricsSlide /></SwiperSlide>
+        <SwiperSlide><TransitionActionSlide /></SwiperSlide>
         <SwiperSlide><OrganicKeywordsSlide /></SwiperSlide>
         <SwiperSlide><TechnicalAnalyticsSlide /></SwiperSlide>
         <SwiperSlide><TechImplementationSlideP1 /></SwiperSlide>
         <SwiperSlide><TechImplementationSlideP2 /></SwiperSlide>
         <SwiperSlide><GenerativeAIOptSlide /></SwiperSlide>
         <SwiperSlide><ActionPlanMaySlide /></SwiperSlide>
-        <SwiperSlide><ExecutiveSummarySlide /></SwiperSlide>
       </Swiper>
 
       {/* Floating navigation button */}

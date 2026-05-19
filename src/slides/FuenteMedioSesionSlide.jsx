@@ -10,27 +10,26 @@ export default function FuenteMedioSesionSlide() {
       name: 'Google / Organic (SEO)',
       sessions: '664',
       pct: '44%',
-      engagement: '70.33%',
-      time: '42s',
+      engagement: null,
+      time: null,
       barW: '44%',
       accent: true,
     },
-
     {
-      icon: '📣',
-      name: 'CPC (Anuncios)',
-      sessions: '209',
-      pct: '13.85%',
+      icon: '⭐',
+      name: 'Directo',
+      sessions: '449',
+      pct: '29,72%',
       engagement: null,
       time: null,
-      barW: '14%',
+      barW: '30%',
       accent: false,
     },
     {
       icon: '📸',
       name: 'Instagram',
       sessions: '138',
-      pct: '9.15%',
+      pct: '9,15%',
       engagement: null,
       time: null,
       barW: '9%',
@@ -48,7 +47,7 @@ export default function FuenteMedioSesionSlide() {
             <p className="slide-label">Origen del Tráfico</p>
             <h2 className="slide-title reveal">Fuente / Medio de Sesión</h2>
             <p className="slide-desc reveal">
-              Análisis del origen de todas las visitas — Abril / Mayo 2026.
+              Esta métrica nos dice exactamente de dónde proviene cada una de las visitas que recibe la web, sin importar si es un cliente nuevo o alguien que vuelve a entrar.
             </p>
           </header>
 

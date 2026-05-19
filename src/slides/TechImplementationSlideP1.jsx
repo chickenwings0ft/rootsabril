@@ -21,8 +21,8 @@ export default function TechImplementationSlideP1() {
 
         {/* Header */}
         <header className="slide-header">
-          <p className="slide-label">Tareas Técnicas Realizadas · Parte 1</p>
-          <h2 className="slide-title reveal">Implementaciones SEO</h2>
+          <p className="slide-label">3</p>
+          <h2 className="slide-title reveal" style={{ fontSize: 'clamp(1.6rem, 5.5vw, 2.4rem)', fontWeight: '900' }}>Preguntas Frecuentes</h2>
           <p className="slide-desc reveal">
             Mejoras técnicas avanzadas para aumentar la visibilidad en Google y preparar la web para nuevos canales de captación.
           </p>
@@ -42,7 +42,7 @@ export default function TechImplementationSlideP1() {
               />
             </div>
             <p style={{
-              fontSize: '0.55rem', fontWeight: '700', color: '#5a7a5a',
+              fontSize: '0.58rem', fontWeight: '800', color: '#5a7a5a',
               textAlign: 'center', letterSpacing: '0.1em', textTransform: 'uppercase'
             }}>
               Vista real en roots.es
@@ -51,27 +51,31 @@ export default function TechImplementationSlideP1() {
 
           {/* Text Content */}
           <div className="insight-stack" style={{ flex: '1.2', overflowY: 'auto', paddingRight: '4px' }}>
-            <div className="insight-card">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem' }}>
+            <div className="insight-card" style={{ padding: '1rem 1.25rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
                 <div style={{
-                  width: '30px', height: '30px', borderRadius: '8px',
+                  width: '32px', height: '32px', borderRadius: '8px',
                   background: 'rgba(29,53,53,0.08)', display: 'flex', alignItems: 'center',
-                  justifyContent: 'center', fontSize: '1rem', flexShrink: 0
+                  justifyContent: 'center', fontSize: '1.1rem', flexShrink: 0
                 }}>⚡</div>
-                <h3 className="insight-card__title">
-                  A. Preguntas Frecuentes y Rich Snippets
+                <h3 className="insight-card__title" style={{ fontSize: '0.85rem', fontWeight: '800' }}>
+                  Preguntas Frecuentes
                 </h3>
               </div>
-              <QABlock
-                question="¿Qué se ha hecho?"
-                answer="Secciones de preguntas frecuentes estratégicas integradas en la web y programadas con código JSON-LD invisible para el usuario."
-                qColor="#1d3535"
-              />
-              <QABlock
-                question="¿Qué beneficio aporta?"
-                answer="Google puede mostrar nuestra página con mayor tamaño en los resultados, incluyendo preguntas y respuestas directamente. Más espacio visual = más clics frente a la competencia."
-                qColor="#2d6a2d"
-              />
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
+                <div>
+                  <p style={{
+                    fontSize: '0.62rem', fontWeight: '800', color: '#2d6a2d',
+                    textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.15rem'
+                  }}>
+                    ¿Qué beneficio aporta?
+                  </p>
+                  <p className="insight-card__body" style={{ fontSize: '0.72rem', lineHeight: '1.4' }}>
+                    Google puede mostrar nuestra página con mayor tamaño en los resultados, incluyendo preguntas y respuestas directamente. Ayudas al usuario a saber más sobre ti.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

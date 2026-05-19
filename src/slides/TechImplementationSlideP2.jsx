@@ -11,10 +11,10 @@ export default function TechImplementationSlideP2() {
 
         {/* Header */}
         <header className="slide-header" style={{ flexShrink: 0 }}>
-          <p className="slide-label">Canales de Conversión · Páginas de Destino</p>
-          <h2 className="slide-title reveal">Páginas de Destino Especializadas (Landings)</h2>
+          <p className="slide-label">4</p>
+          <h2 className="slide-title reveal">Landing Pages</h2>
           <p className="slide-desc reveal">
-            Sección de alto impacto diseñada para la conversión directa de Brunch, Menú y Vinos.
+            Creación de landing pages específicas con estudio de palabras clave para mejorar nuestra presencia online. <em>*La siguiente landing page está operativa ya en los buscadores*</em> Ejemplo
           </p>
         </header>
 
@@ -22,8 +22,8 @@ export default function TechImplementationSlideP2() {
         <div 
           className="reveal"
           style={{
-            flex: 1,
             width: '100%',
+            maxHeight: '230px',
             background: '#ffffff',
             borderRadius: '14px',
             border: '1px solid rgba(29, 53, 53, 0.15)',
@@ -51,7 +51,6 @@ export default function TechImplementationSlideP2() {
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffbd2e' }} />
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#27c93f' }} />
             </div>
-
             {/* Address Bar */}
             <div style={{
               background: 'rgba(255, 255, 255, 0.85)',
@@ -73,7 +72,7 @@ export default function TechImplementationSlideP2() {
               justifyContent: 'center',
               gap: '0.25rem'
             }}>
-              🔒 <span style={{ opacity: 0.85 }}>rootsrioja.com/winebar</span>
+              <span style={{ opacity: 0.85 }}>rootsrioja.com/winebar</span>
             </div>
 
             {/* Empty Right Column for balance */}
@@ -88,7 +87,7 @@ export default function TechImplementationSlideP2() {
             flexDirection: 'column', 
             alignItems: 'center', 
             justifyContent: 'center', 
-            padding: '1.5rem',
+            padding: '0.9rem 1.5rem',
             textAlign: 'center',
             position: 'relative',
             overflow: 'hidden'
@@ -107,14 +106,8 @@ export default function TechImplementationSlideP2() {
             }} />
 
             {/* Brand Logo and Content */}
-            <div style={{ maxWidth: '400px', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.85rem' }}>
+            <div style={{ maxWidth: '400px', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.65rem' }}>
               
-              <div style={{
-                fontSize: '1.8rem',
-                lineHeight: 1,
-                marginBottom: '0.25rem'
-              }}>🍷</div>
-
               <h3 style={{
                 fontSize: '1.1rem',
                 fontWeight: '900',
@@ -126,22 +119,11 @@ export default function TechImplementationSlideP2() {
                 Roots Winebar
               </h3>
 
-              <p style={{
-                fontSize: '0.72rem',
-                color: 'var(--color-dark)',
-                lineHeight: 1.5,
-                margin: 0,
-                opacity: 0.85,
-                fontWeight: 500
-              }}>
-                Portal de reservas e información de producto en vivo. Desarrollada para agilizar el proceso de reserva y mejorar el posicionamiento SEO local de brunch, menús y vinos.
-              </p>
-
               {/* Call to Action Button */}
               <button 
                 onClick={handleOpenLanding}
                 style={{
-                  marginTop: '0.75rem',
+                  marginTop: '0.45rem',
                   padding: '0.75rem 1.5rem',
                   background: '#1d3535',
                   color: '#ede8df',
@@ -161,7 +143,7 @@ export default function TechImplementationSlideP2() {
                 onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.04)'; e.currentTarget.style.background = '#254848'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = '#1d3535'; }}
               >
-                Abrir Landing Page ↗
+                Abrir Landing Page
               </button>
             </div>
           </div>
@@ -177,7 +159,7 @@ export default function TechImplementationSlideP2() {
             flexShrink: 0
           }}>
             <p style={{ margin: 0, fontSize: '0.54rem', fontWeight: '700', color: 'var(--color-muted)', textAlign: 'center' }}>
-              💡 Al pulsar el botón se abrirá la web oficial en una nueva pestaña del navegador.
+              Al pulsar el botón se abrirá la web oficial en una nueva pestaña del navegador.
             </p>
           </div>
         </div>
