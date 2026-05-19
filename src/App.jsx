@@ -24,12 +24,11 @@ import GenerativeAIOptSlide from './slides/GenerativeAIOptSlide'
 import ActionPlanMaySlide from './slides/ActionPlanMaySlide'
 
 import Nav from './components/Nav'
-import Preloader from './components/Preloader'
 import { prepareSlideAnimations, animateSlideIn } from './animations'
 
 function App() {
   const [swiperInstance, setSwiperInstance] = useState(null)
-  const [introFinished, setIntroFinished] = useState(false)
+  const [introFinished, setIntroFinished] = useState(true)
   const [activeIndex, setActiveIndex] = useState(0)
 
   // Auth State
@@ -149,7 +148,6 @@ function App() {
 
   return (
     <div style={{ width: '100vw', height: '100dvh', overflow: 'hidden', background: 'var(--color-cream)', position: 'relative' }}>
-      <Preloader onFinish={() => setIntroFinished(true)} />
       <div style={{ opacity: isLastSlide ? 0 : 1, transition: 'opacity 0.6s ease' }}>
         <Nav />
       </div>
