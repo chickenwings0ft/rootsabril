@@ -46,16 +46,16 @@ export default function TechBrowsersSlide() {
           </header>
 
           {/* Main Body */}
-          <div className="slide-body" style={{ gap: '0.6rem' }}>
+          <div className="slide-body" style={{ flexDirection: 'column', gap: '0.65rem', alignItems: 'stretch' }}>
 
             {/* Chart Frame */}
-            <div className="chart-frame reveal" onClick={() => setIsLightboxOpen(true)} role="button" aria-label="Ver gráfico ampliado" style={{ height: 'clamp(100px, 18dvh, 170px)' }}>
-              <img src="./datos-de-tec.png" alt="Gráfico de Distribución de Dispositivos" className="chart-img" />
+            <div className="chart-frame reveal" onClick={() => setIsLightboxOpen(true)} role="button" aria-label="Ver gráfico ampliado" style={{ height: '140px', width: '100%', cursor: 'pointer' }}>
+              <img src="./datos-de-tec.png" alt="Gráfico de Distribución de Dispositivos" className="chart-img" style={{ objectFit: 'contain' }} />
               <span className="zoom-badge">🔍 Zoom</span>
             </div>
 
-            {/* Devices list as structured cards */}
-            <div className="reveal-stagger" style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', flex: 1, justifyContent: 'center' }}>
+            {/* Devices list as structured cards directly below the photo */}
+            <div className="reveal-stagger" style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem', width: '100%' }}>
               {devices.map((d) => (
                 <div key={d.name} className="insight-card" style={{ 
                   padding: '0.7rem 0.95rem',
