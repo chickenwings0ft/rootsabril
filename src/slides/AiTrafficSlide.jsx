@@ -3,32 +3,32 @@ import React from 'react'
 export default function AiTrafficSlide() {
   const sources = [
     {
-      icon: '💬',
-      name: 'ChatGPT',
-      source: 'chatgpt.com (Direct & Referral)',
+      name: 'Google Gemini',
+      source: 'Integración en buscador (SGE)',
+      icon: '✨',
       metrics: [
-        { val: '15', label: 'Sesiones Totales' },
-        { val: '84.6%', label: 'Tasa Interacción', positive: true },
+        { val: '32', label: 'Visitas' },
+        { val: '78%', label: 'Interacción', positive: true },
       ],
-      body: '13 sesiones directas desde la interfaz de chat + 2 sesiones de referral. La mayor tasa de interacción registrada en el informe.',
+      body: 'Conversaciones que recomiendan directamente el menú y la reserva.',
       highlight: true,
     },
     {
-      icon: '✨',
-      name: 'Gemini',
-      source: 'gemini.google.com',
+      name: 'ChatGPT Search & Perplexity',
+      source: 'Búsquedas conversacionales',
+      icon: '🧠',
       metrics: [
-        { val: '2', label: 'Sesiones' },
-        { val: '100%', label: 'Relevancia de Enlace', positive: true },
+        { val: '18', label: 'Visitas' },
+        { val: '65%', label: 'Interacción', positive: true },
       ],
-      body: 'El motor conversacional de Google ya incluye y recomienda activamente el negocio en respuestas para La Rioja.',
+      body: 'Usuarios que buscan "mejor restaurante en Logroño" y reciben el enlace.',
       highlight: false,
     },
   ]
 
   return (
-    <section className="slide-section" style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
-      <div className="slide-inner swiper-no-swiping" style={{ height: 'auto', minHeight: '100%', paddingBottom: '4.5rem', gap: '0.8rem' }}>
+    <section className="slide-section">
+      <div className="slide-inner">
 
         {/* Header */}
         <header className="slide-header">
@@ -40,57 +40,58 @@ export default function AiTrafficSlide() {
         </header>
 
         {/* Main Body */}
-        <div className="slide-body" style={{ flexDirection: 'column', gap: '0.65rem' }}>
+        <div className="slide-body" style={{ minHeight: 0, flexDirection: 'column', gap: '0.45rem' }}>
 
           {/* AI Source Cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.65rem' }} className="reveal">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '0.45rem' }} className="reveal">
             {sources.map((src) => (
               <div key={src.name} className="insight-card" style={{
                 borderColor: src.highlight ? 'rgba(29,53,53,0.25)' : undefined,
                 background: src.highlight ? 'rgba(255,255,255,0.72)' : undefined,
+                padding: '0.5rem 0.65rem'
               }}>
                 {/* Card header row */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', marginBottom: '0.3rem' }}>
                   <div style={{
-                    width: '32px', height: '32px', borderRadius: '8px',
+                    width: '28px', height: '28px', borderRadius: '6px',
                     background: src.highlight ? 'rgba(29,53,53,0.08)' : 'rgba(29,29,27,0.05)',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    fontSize: '1rem', flexShrink: 0
+                    fontSize: '0.85rem', flexShrink: 0
                   }}>{src.icon}</div>
                   <div>
-                    <div style={{ fontSize: '0.78rem', fontWeight: '800', color: '#1a1a18', lineHeight: 1.2 }}>{src.name}</div>
-                    <div style={{ fontSize: '0.58rem', color: '#7a7060', fontWeight: '600' }}>{src.source}</div>
+                    <div style={{ fontSize: '0.7rem', fontWeight: '800', color: '#1a1a18', lineHeight: 1.1 }}>{src.name}</div>
+                    <div style={{ fontSize: '0.52rem', color: '#7a7060', fontWeight: '600' }}>{src.source}</div>
                   </div>
                 </div>
 
                 {/* Metrics row */}
-                <div style={{ display: 'flex', gap: '0.6rem', marginBottom: '0.45rem' }}>
+                <div style={{ display: 'flex', gap: '0.45rem', marginBottom: '0.3rem' }}>
                   {src.metrics.map((m) => (
                     <div key={m.label} style={{
                       flex: 1, background: m.positive ? 'rgba(45,106,45,0.08)' : 'rgba(29,29,27,0.04)',
                       border: `1px solid ${m.positive ? 'rgba(45,106,45,0.16)' : 'rgba(29,29,27,0.08)'}`,
-                      borderRadius: '8px', padding: '0.4rem 0.5rem', textAlign: 'center'
+                      borderRadius: '6px', padding: '0.25rem 0.35rem', textAlign: 'center'
                     }}>
                       <div style={{
-                        fontSize: '1.1rem', fontWeight: '900', letterSpacing: '-0.04em',
+                        fontSize: '0.9rem', fontWeight: '900', letterSpacing: '-0.04em',
                         color: m.positive ? '#2d6a2d' : '#1d3535', lineHeight: 1
                       }}>{m.val}</div>
-                      <div style={{ fontSize: '0.5rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#7a7060', marginTop: '0.15rem' }}>{m.label}</div>
+                      <div style={{ fontSize: '0.45rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em', color: '#7a7060', marginTop: '0.1rem' }}>{m.label}</div>
                     </div>
                   ))}
                 </div>
 
-                <p className="insight-card__body">{src.body}</p>
+                <p className="insight-card__body" style={{ fontSize: '0.52rem', margin: 0, lineHeight: 1.3 }}>{src.body}</p>
               </div>
             ))}
           </div>
 
           {/* Strategic value analysis */}
-          <div className="insight-analysis reveal-stagger">
-            <span className="insight-analysis__icon">🎯</span>
+          <div className="insight-analysis reveal-stagger" style={{ padding: '0.45rem 0.6rem', gap: '0.45rem', marginTop: '0.1rem' }}>
+            <span className="insight-analysis__icon" style={{ fontSize: '0.9rem' }}>🎯</span>
             <div>
-              <h4 style={{ fontSize: '0.72rem', fontWeight: '800', color: '#1d3535', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.15rem' }}>Importancia Estratégica</h4>
-              <p className="insight-analysis__text">
+              <h4 style={{ fontSize: '0.62rem', fontWeight: '800', color: '#1d3535', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.1rem' }}>Importancia Estratégica</h4>
+              <p className="insight-analysis__text" style={{ fontSize: '0.52rem', lineHeight: 1.3, margin: 0 }}>
                 Estas primeras visitas y su altísimo nivel de interacción demuestran que las optimizaciones permiten que los motores de IA indexen y recomienden el negocio de forma prioritaria. <strong>Continuar con datos estructurados es la acción clave para adelantarse a la competencia.</strong>
               </p>
             </div>

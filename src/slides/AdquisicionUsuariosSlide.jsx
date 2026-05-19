@@ -33,8 +33,8 @@ export default function AdquisicionUsuariosSlide() {
 
   return (
     <>
-      <section className="slide-section" style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <div className="slide-inner swiper-no-swiping" style={{ height: 'auto', minHeight: '100%', paddingBottom: '4.5rem' }}>
+      <section className="slide-section">
+        <div className="slide-inner">
 
           {/* Header */}
           <header className="slide-header">
@@ -46,7 +46,7 @@ export default function AdquisicionUsuariosSlide() {
           </header>
 
           {/* Main Content */}
-          <div className="slide-body">
+          <div className="slide-body" style={{ minHeight: 0 }}>
 
             {/* Chart */}
             <div
@@ -54,6 +54,7 @@ export default function AdquisicionUsuariosSlide() {
               onClick={() => setIsLightboxOpen(true)}
               role="button"
               aria-label="Ver gráfico ampliado"
+              style={{ height: 'clamp(90px, 15dvh, 130px)', flexShrink: 0 }}
             >
               <img
                 src="./1. Adquisicion de usuarios.png"
