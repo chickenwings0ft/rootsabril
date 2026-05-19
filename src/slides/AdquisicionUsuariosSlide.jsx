@@ -33,8 +33,8 @@ export default function AdquisicionUsuariosSlide() {
 
   return (
     <>
-      <section className="slide-section">
-        <div className="slide-inner slide-inner--scrollable swiper-no-swiping">
+      <section className="slide-section" style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div className="slide-inner swiper-no-swiping" style={{ height: 'auto', minHeight: '100%', paddingBottom: '4.5rem' }}>
 
           {/* Header */}
           <header className="slide-header">

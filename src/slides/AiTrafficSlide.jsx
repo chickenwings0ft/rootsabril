@@ -27,8 +27,8 @@ export default function AiTrafficSlide() {
   ]
 
   return (
-    <section className="slide-section">
-      <div className="slide-inner slide-inner--scrollable swiper-no-swiping" style={{ gap: '0.8rem' }}>
+    <section className="slide-section" style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch' }}>
+      <div className="slide-inner swiper-no-swiping" style={{ height: 'auto', minHeight: '100%', paddingBottom: '4.5rem', gap: '0.8rem' }}>
 
         {/* Header */}
         <header className="slide-header">
