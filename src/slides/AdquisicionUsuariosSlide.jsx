@@ -7,27 +7,27 @@ export default function AdquisicionUsuariosSlide() {
   const insights = [
     {
       icon: '🔍',
-      title: 'Principal Fuente: Google SEO',
-      stat: '483',
+      title: 'SEO',
+      stat: '485',
       statLabel: 'nuevos usuarios',
       pct: '43%',
-      body: 'El tráfico orgánico se consolida como canal nº1 de captación.',
-    },
-    {
-      icon: '⭐',
-      title: 'Notoriedad: Tráfico Directo',
-      stat: '338',
-      statLabel: 'nuevos usuarios',
-      pct: '30%',
-      body: 'Fuerte reconocimiento de marca: los usuarios acceden directamente sin buscador.',
+      body: 'El posicionamiento web organico es el canal número uno. Casi la mitad de los visitantes entran de forma orgánica, lo que significa que la web aparece exactamente cuando la gente busca dónde comer o tomar algo.',
     },
     {
       icon: '⏱️',
-      title: 'Calidad de las Visitas SEO',
+      title: 'Visitas de alta calidad',
       stat: '51s',
-      statLabel: 'tiempo medio',
+      statLabel: 'de media',
       pct: null,
-      body: 'Los usuarios orgánicos son los que más tiempo permanecen en la web.',
+      body: 'Las personas que nos encuentran a través de Google son las que más tiempo pasan navegando por la web.',
+    },
+    {
+      icon: '⭐',
+      title: 'Fuerte notoriedad de marca',
+      stat: '338',
+      statLabel: 'nuevos usuarios',
+      pct: '30%',
+      body: 'Es el tráfico directo. Esto indica que un tercio de los usuarios accede escribiendo directamente el nombre del restaurante o porque ya tienen la web guardada.',
     },
   ]
 
