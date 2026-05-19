@@ -24,7 +24,7 @@ export default function ReportHeroSlide() {
         className="hero__logo hero-enter"
         style={{
           height: 'clamp(38px, 7.5vw, 54px)',
-          marginBottom: '0.45rem',
+          marginBottom: '0.18rem',
           objectFit: 'contain',
           zIndex: 2,
           filter: 'brightness(0) saturate(100%)'
