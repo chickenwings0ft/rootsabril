@@ -195,7 +195,7 @@ function App() {
           className="swiper-no-swiping"
           style={{
             position: 'absolute',
-            bottom: '0.85rem',
+            bottom: '1.25rem',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 999,
