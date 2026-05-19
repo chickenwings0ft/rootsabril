@@ -152,9 +152,9 @@ function App() {
       </div>
       
       <Swiper
-        allowTouchMove={introFinished}
-        allowSlideNext={introFinished}
-        allowSlidePrev={introFinished}
+        allowTouchMove={true}
+        allowSlideNext={true}
+        allowSlidePrev={true}
         direction="horizontal"
         slidesPerView={1}
         mousewheel={{ forceToAxis: true, sensitivity: 1 }}
@@ -192,7 +192,7 @@ function App() {
           className="swiper-no-swiping"
           style={{
             position: 'absolute',
-            bottom: '1.6rem',
+            bottom: 'clamp(0.65rem, 2dvh, 1.15rem)',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 999,
@@ -200,15 +200,15 @@ function App() {
             color: isFirstSlide ? '#ede8df' : 'rgba(29,29,27,0.32)',
             border: isFirstSlide ? '1px solid rgba(237,232,223,0.22)' : '1px solid rgba(29,29,27,0.13)',
             borderRadius: '50px',
-            padding: '0.42rem 1.1rem',
-            fontSize: '0.56rem',
+            padding: '0.28rem 0.8rem',
+            fontSize: 'clamp(0.46rem, 1.3vw, 0.52rem)',
             fontWeight: '700',
             textTransform: 'uppercase',
-            letterSpacing: '0.14em',
+            letterSpacing: '0.12em',
             cursor: 'pointer',
             display: 'flex',
             alignItems: 'center',
-            gap: '0.35rem',
+            gap: '0.25rem',
             transition: 'opacity 0.3s, color 0.3s, border-color 0.3s, background 0.3s',
             opacity: isFirstSlide ? 0.85 : 0.65,
             whiteSpace: 'nowrap',
