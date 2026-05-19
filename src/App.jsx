@@ -26,6 +26,8 @@ import ActionPlanMaySlide from './slides/ActionPlanMaySlide'
 import Nav from './components/Nav'
 import { prepareSlideAnimations, animateSlideIn } from './animations'
 
+const isTouchDevice = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
+
 function App() {
   const [swiperInstance, setSwiperInstance] = useState(null)
   const [introFinished, setIntroFinished] = useState(true)
@@ -153,15 +155,15 @@ function App() {
       </div>
       
       <Swiper
-        allowTouchMove={true}
+        allowTouchMove={isTouchDevice}
         allowSlideNext={true}
         allowSlidePrev={true}
         direction="horizontal"
         slidesPerView={1}
-        mousewheel={{ forceToAxis: true, sensitivity: 1 }}
+        mousewheel={false}
         keyboard={{ enabled: true }}
         pagination={{ clickable: true }}
-        modules={[Mousewheel, Keyboard, Pagination]}
+        modules={[Keyboard, Pagination]}
         onSwiper={handleSwiperInit}
         onSlideChange={handleSlideChange}
         speed={800}
