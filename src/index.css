@@ -78,9 +78,7 @@ strong { font-weight: 800; }
 
 /* ---- NAV ---- */
 /* --nav-h defines the rendered nav height — used as top-offset across all slides */
-:root { 
-  --nav-h: calc(54px + env(safe-area-inset-top, 0px)); 
-}
+:root { --nav-h: 54px; }
 
 .nav {
   position: fixed;
@@ -92,7 +90,7 @@ strong { font-weight: 800; }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: env(safe-area-inset-top, 0px) 1.25rem 0;
+  padding: 0 1.25rem;
   background: #1d1d1b;
 }
 
