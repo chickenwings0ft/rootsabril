@@ -17,20 +17,6 @@ export default function ReportHeroSlide() {
         ABRIL
       </div>
 
-      {/* Logo */}
-      <img
-        src="./logo-invertido.png"
-        alt="Roots Rioja"
-        className="hero__logo hero-enter"
-        style={{
-          height: 'clamp(38px, 7.5vw, 54px)',
-          marginBottom: '0.18rem',
-          objectFit: 'contain',
-          zIndex: 2,
-          filter: 'brightness(0) saturate(100%)'
-        }}
-      />
-
       {/* Title */}
       <h1
         className="hero__title hero-enter"
