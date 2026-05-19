@@ -34,7 +34,7 @@ export default function AdquisicionUsuariosSlide() {
   return (
     <>
       <section className="slide-section">
-        <div className="slide-inner">
+        <div className="slide-inner slide-inner--scrollable swiper-no-swiping">
 
           {/* Header */}
           <header className="slide-header">
