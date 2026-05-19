@@ -648,6 +648,12 @@ strong { font-weight: 800; }
   overflow: hidden;
 }
 
+.slide-inner--scrollable {
+  overflow-y: auto !important;
+  justify-content: flex-start !important;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ---- SLIDE HEADER ---- */
 .slide-header {
   flex-shrink: 0;

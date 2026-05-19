@@ -28,7 +28,7 @@ export default function AiTrafficSlide() {
 
   return (
     <section className="slide-section">
-      <div className="slide-inner" style={{ justifyContent: 'space-between', gap: '0.8rem' }}>
+      <div className="slide-inner slide-inner--scrollable" style={{ gap: '0.8rem' }}>
 
         {/* Header */}
         <header className="slide-header">

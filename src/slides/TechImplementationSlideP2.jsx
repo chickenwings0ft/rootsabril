@@ -1,25 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export default function TechImplementationSlideP2() {
-  const [iframeLoading, setIframeLoading] = useState(true)
+  const handleOpenLanding = () => {
+    window.open('https://rootsrioja.com/winebar', '_blank', 'noopener,noreferrer')
+  }
 
   return (
     <section className="slide-section">
-      <div className="slide-inner" style={{ justifyContent: 'flex-start', gap: '0.55rem', height: '100%' }}>
+      <div className="slide-inner" style={{ justifyContent: 'flex-start', gap: '0.65rem', height: '100%' }}>
 
         {/* Header */}
         <header className="slide-header" style={{ flexShrink: 0 }}>
           <p className="slide-label">Canales de Conversión · Páginas de Destino</p>
-          <h2 className="slide-title reveal">Nueva Landing Page en Vivo</h2>
+          <h2 className="slide-title reveal">Páginas de Destino Especializadas (Landings)</h2>
           <p className="slide-desc reveal">
-            Sección especializada para captación de clientes de Brunch, Menú y Vinos:{' '}
-            <strong style={{ color: 'var(--color-green)' }}>rootsrioja.com/winebar</strong>
+            Sección de alto impacto diseñada para la conversión directa de Brunch, Menú y Vinos.
           </p>
         </header>
 
         {/* Browser Frame Layout */}
         <div 
-          className="reveal swiper-no-swiping"
+          className="reveal"
           style={{
             flex: 1,
             width: '100%',
@@ -36,7 +37,7 @@ export default function TechImplementationSlideP2() {
         >
           {/* Browser Top Bar Mock */}
           <div style={{
-            padding: '0.45rem 0.85rem',
+            padding: '0.55rem 0.85rem',
             background: '#ede8df',
             borderBottom: '1px solid rgba(29, 29, 27, 0.08)',
             display: 'flex',
@@ -61,8 +62,8 @@ export default function TechImplementationSlideP2() {
               color: 'var(--color-green)',
               fontWeight: '700',
               textAlign: 'center',
-              width: '55%',
-              maxWidth: '360px',
+              width: '65%',
+              maxWidth: '380px',
               overflow: 'hidden',
               textOverflow: 'ellipsis',
               whiteSpace: 'nowrap',
@@ -75,59 +76,99 @@ export default function TechImplementationSlideP2() {
               🔒 <span style={{ opacity: 0.85 }}>rootsrioja.com/winebar</span>
             </div>
 
-            {/* Live Indicator */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-              <span style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                background: '#27c93f',
-                animation: 'pulseGreen 1.5s infinite'
-              }} />
-              <span style={{ fontSize: '0.52rem', fontWeight: '800', textTransform: 'uppercase', color: '#27c93f', letterSpacing: '0.05em' }}>
-                Interactivo
-              </span>
-            </div>
+            {/* Empty Right Column for balance */}
+            <div style={{ width: '36px' }} />
           </div>
 
-          {/* Iframe View Area */}
-          <div style={{ flex: 1, position: 'relative', background: '#ffffff', minHeight: 0 }}>
-            {iframeLoading && (
+          {/* Styled Hub/Preview Area */}
+          <div style={{ 
+            flex: 1, 
+            background: 'var(--color-cream)', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            padding: '1.5rem',
+            textAlign: 'center',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            
+            {/* Decorative background visual items representing roots wine bar style */}
+            <div style={{
+              position: 'absolute', width: '280px', height: '280px', borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(29,53,53,0.03) 0%, transparent 70%)',
+              top: '-10%', left: '-10%', pointerEvents: 'none'
+            }} />
+            <div style={{
+              position: 'absolute', width: '280px', height: '280px', borderRadius: '50%',
+              background: 'radial-gradient(circle, rgba(29,53,53,0.03) 0%, transparent 70%)',
+              bottom: '-10%', right: '-10%', pointerEvents: 'none'
+            }} />
+
+            {/* Brand Logo and Content */}
+            <div style={{ maxWidth: '400px', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.85rem' }}>
+              
               <div style={{
-                position: 'absolute',
-                inset: 0,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                background: 'rgba(252, 251, 250, 0.98)',
-                gap: '0.65rem',
-                zIndex: 2
+                fontSize: '1.8rem',
+                lineHeight: 1,
+                marginBottom: '0.25rem'
+              }}>🍷</div>
+
+              <h3 style={{
+                fontSize: '1.1rem',
+                fontWeight: '900',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                color: 'var(--color-green)',
+                margin: 0
               }}>
-                <div style={{
-                  width: '26px',
-                  height: '26px',
-                  border: '2.5px solid rgba(29, 53, 53, 0.12)',
-                  borderTop: '2.5px solid var(--color-green)',
-                  borderRadius: '50%',
-                  animation: 'spinLoader 0.8s linear infinite'
-                }} />
-                <span style={{ fontSize: '0.58rem', fontWeight: '800', textTransform: 'uppercase', color: 'var(--color-green)', letterSpacing: '0.08em' }}>
-                  Cargando demo en vivo...
-                </span>
-              </div>
-            )}
-            <iframe
-              src="https://rootsrioja.com/winebar"
-              title="Demo en vivo de la Landing Page Winebar"
-              style={{ width: '100%', height: '100%', border: 'none' }}
-              onLoad={() => setIframeLoading(false)}
-            />
+                Roots Winebar
+              </h3>
+
+              <p style={{
+                fontSize: '0.72rem',
+                color: 'var(--color-dark)',
+                lineHeight: 1.5,
+                margin: 0,
+                opacity: 0.85,
+                fontWeight: 500
+              }}>
+                Portal de reservas e información de producto en vivo. Desarrollada para agilizar el proceso de reserva y mejorar el posicionamiento SEO local de brunch, menús y vinos.
+              </p>
+
+              {/* Call to Action Button */}
+              <button 
+                onClick={handleOpenLanding}
+                style={{
+                  marginTop: '0.75rem',
+                  padding: '0.75rem 1.5rem',
+                  background: '#1d3535',
+                  color: '#ede8df',
+                  border: 'none',
+                  borderRadius: '30px',
+                  fontSize: '0.68rem',
+                  fontWeight: '800',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.12em',
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.45rem',
+                  boxShadow: '0 4px 16px rgba(29,53,53,0.22)',
+                  transition: 'transform 0.2s, background 0.25s'
+                }}
+                onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.04)'; e.currentTarget.style.background = '#254848'; }}
+                onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = '#1d3535'; }}
+              >
+                Abrir Landing Page ↗
+              </button>
+            </div>
           </div>
 
           {/* User Hint Footer */}
           <div style={{
-            padding: '0.45rem 0.85rem',
+            padding: '0.55rem 0.85rem',
             background: '#fcfbfa',
             borderTop: '1px solid rgba(29, 29, 27, 0.06)',
             display: 'flex',
@@ -135,25 +176,13 @@ export default function TechImplementationSlideP2() {
             alignItems: 'center',
             flexShrink: 0
           }}>
-            <p style={{ margin: 0, fontSize: '0.56rem', fontWeight: '700', color: 'var(--color-muted)', textAlign: 'center' }}>
-              👆 <strong>Prueba real:</strong> Puedes hacer scroll, navegar y pulsar botones dentro de la ventana de arriba.
+            <p style={{ margin: 0, fontSize: '0.54rem', fontWeight: '700', color: 'var(--color-muted)', textAlign: 'center' }}>
+              💡 Al pulsar el botón se abrirá la web oficial en una nueva pestaña del navegador.
             </p>
           </div>
         </div>
 
       </div>
-
-      {/* Animation rules */}
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes pulseGreen {
-          0% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0.4); }
-          70% { box-shadow: 0 0 0 5px rgba(39, 201, 63, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(39, 201, 63, 0); }
-        }
-        @keyframes spinLoader {
-          to { transform: rotate(360deg); }
-        }
-      `}} />
     </section>
   )
 }

@@ -8,7 +8,7 @@ export default function ReportHeroSlide() {
         display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
         height: '100dvh', paddingTop: 'calc(var(--nav-h, 54px) + 0.5rem)',
         paddingBottom: '3.5rem', paddingLeft: '1.25rem', paddingRight: '1.25rem',
-        textAlign: 'center', position: 'relative', overflow: 'hidden',
+        textAlign: 'center', position: 'relative', overflowY: 'auto', WebkitOverflowScrolling: 'touch',
         background: '#1d1d1b',
       }}
     >
