@@ -15,16 +15,7 @@ export default function FuenteMedioSesionSlide() {
       barW: '44%',
       accent: true,
     },
-    {
-      icon: '⭐',
-      name: 'Directo',
-      sessions: '449',
-      pct: '29.75%',
-      engagement: null,
-      time: null,
-      barW: '30%',
-      accent: false,
-    },
+
     {
       icon: '📣',
       name: 'CPC (Anuncios)',

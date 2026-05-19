@@ -21,14 +21,6 @@ export default function AdquisicionUsuariosSlide() {
       pct: null,
       body: 'Las personas que nos encuentran a través de Google son las que más tiempo pasan navegando por la web.',
     },
-    {
-      icon: '⭐',
-      title: 'Fuerte notoriedad de marca',
-      stat: '338',
-      statLabel: 'nuevos usuarios',
-      pct: '30%',
-      body: 'Es el tráfico directo. Esto indica que un tercio de los usuarios accede escribiendo directamente el nombre del restaurante o porque ya tienen la web guardada.',
-    },
   ]
 
   return (
