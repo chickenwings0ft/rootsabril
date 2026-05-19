@@ -91,10 +91,8 @@ strong { font-weight: 800; }
   align-items: center;
   justify-content: space-between;
   padding: 0 1.25rem;
-  background: rgba(29, 29, 27, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: #1d1d1b !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-logo { height: 38px; object-fit: contain; }
