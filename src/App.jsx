@@ -95,7 +95,7 @@ function App() {
           pointerEvents: 'none'
         }} />
 
-        <img src="./logo-original.png" alt="Roots Rioja" style={{ width: '220px', marginBottom: '3rem', position: 'relative', zIndex: 1 }} />
+        <img src="./logo-invertido.png" alt="Roots Rioja" style={{ width: '220px', marginBottom: '3rem', position: 'relative', zIndex: 1 }} />
 
         <form onSubmit={handleLogin} style={{
           display: 'flex', flexDirection: 'column', alignItems: 'center',
