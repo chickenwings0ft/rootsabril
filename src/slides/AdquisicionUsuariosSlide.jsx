@@ -1,0 +1,107 @@
+import React, { useState } from 'react'
+import { createPortal } from 'react-dom'
+
+export default function AdquisicionUsuariosSlide() {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
+
+  const insights = [
+    {
+      icon: '🔍',
+      title: 'Principal Fuente: Google SEO',
+      stat: '483',
+      statLabel: 'nuevos usuarios',
+      pct: '43%',
+      body: 'El tráfico orgánico se consolida como canal nº1 de captación.',
+    },
+    {
+      icon: '⭐',
+      title: 'Notoriedad: Tráfico Directo',
+      stat: '338',
+      statLabel: 'nuevos usuarios',
+      pct: '30%',
+      body: 'Fuerte reconocimiento de marca: los usuarios acceden directamente sin buscador.',
+    },
+    {
+      icon: '⏱️',
+      title: 'Calidad de las Visitas SEO',
+      stat: '51s',
+      statLabel: 'tiempo medio',
+      pct: null,
+      body: 'Los usuarios orgánicos son los que más tiempo permanecen en la web.',
+    },
+  ]
+
+  return (
+    <>
+      <section className="slide-section">
+        <div className="slide-inner">
+
+          {/* Header */}
+          <header className="slide-header">
+            <p className="slide-label">Captación de Clientes</p>
+            <h2 className="slide-title reveal">Rendimiento de Captación</h2>
+            <p className="slide-desc reveal">
+              Cómo llegan nuevos usuarios a la web — Abril / Mayo 2026.
+            </p>
+          </header>
+
+          {/* Main Content */}
+          <div className="slide-body">
+
+            {/* Chart */}
+            <div
+              className="chart-frame reveal"
+              onClick={() => setIsLightboxOpen(true)}
+              role="button"
+              aria-label="Ver gráfico ampliado"
+            >
+              <img
+                src="./1. Adquisicion de usuarios.png"
+                alt="Gráfico de Adquisición de Usuarios — GA4"
+                className="chart-img"
+              />
+              <span className="zoom-badge">🔍 Zoom</span>
+            </div>
+
+            {/* Insight Cards */}
+            <div className="insight-stack reveal-stagger">
+              {insights.map((ins) => (
+                <div key={ins.title} className="insight-card" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  {/* Stat block */}
+                  <div style={{
+                    flexShrink: 0, minWidth: '60px', textAlign: 'center',
+                    background: 'rgba(29,53,53,0.07)', border: '1px solid rgba(29,53,53,0.14)',
+                    borderRadius: '10px', padding: '0.4rem 0.5rem'
+                  }}>
+                    <div style={{ fontSize: '1.1rem', fontWeight: '900', letterSpacing: '-0.04em', color: 'var(--color-green)', lineHeight: 1 }}>{ins.stat}</div>
+                    <div style={{ fontSize: '0.48rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.08em', color: '#5a7a5a', marginTop: '0.15rem', whiteSpace: 'nowrap' }}>{ins.statLabel}</div>
+                    {ins.pct && <div style={{ fontSize: '0.62rem', fontWeight: '800', color: '#2d6a2d', marginTop: '0.1rem' }}>{ins.pct}</div>}
+                  </div>
+                  {/* Text */}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div className="insight-card__head" style={{ marginBottom: '0.1rem' }}>
+                      <span className="insight-card__icon">{ins.icon}</span>
+                      <h3 className="insight-card__title">{ins.title}</h3>
+                    </div>
+                    <p className="insight-card__body">{ins.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* Lightbox */}
+      {isLightboxOpen && typeof document !== 'undefined' && createPortal(
+        <div className="lightbox swiper-no-swiping" onClick={() => setIsLightboxOpen(false)} role="dialog" aria-label="Cerrar imagen ampliada">
+          <img src="./1. Adquisicion de usuarios.png" alt="Zoom Adquisición de Usuarios" className="lightbox__img" />
+          <button className="lightbox__close" onClick={() => setIsLightboxOpen(false)}>✕ Cerrar</button>
+        </div>,
+        document.body
+      )}
+    </>
+  )
+}
